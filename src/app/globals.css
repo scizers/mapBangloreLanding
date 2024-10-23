@@ -59,6 +59,9 @@ body {
   font-size: 22px;
   line-height: 26.82px;
 }
+.cursor-pointer{
+  cursor: pointer;
+}
 .next-arrow {
   position: absolute;
   bottom: 0;

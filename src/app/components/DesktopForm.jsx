@@ -2,16 +2,16 @@
 import React, { useState } from "react";
 import DesktopFormComp from "./DesktopFormComp";
 
-function DesktopForm() {
+function DesktopForm({formName}) {
   const [load, setLoad] = useState(false);
   return (
     <section className="flex flex-col items-center w-full mx-auto">
       <div className="w-[90%]">
-        <DesktopFormComp formName={"bottomForm"} setLoad={setLoad} />
+        <DesktopFormComp formName={formName} setLoad={setLoad} />
 
         <label
-          className={`block btn ${load && "opacity-50 "}`}
-          htmlFor="bottomForm-submit"
+          className={`block cursor-pointer btn ${load && "opacity-50 "}`}
+          htmlFor={`${formName}-submit`}
         >
           {load ? "Submitting..." : "Submit"}
         </label>

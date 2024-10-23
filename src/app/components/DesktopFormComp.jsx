@@ -92,6 +92,9 @@ function DesktopForm({ formName, setLoad, loc }) {
       let doc = await addForm(obj);
       // console.log("dov", obj);
       setLoad(false);
+      if(doc?.ok){
+        setFormData(initState);
+      }
     } catch (error) {
       console.error("Error while submitting form", error);
       setLoad(false);
@@ -118,6 +121,7 @@ function DesktopForm({ formName, setLoad, loc }) {
             onChange={(e) => handleChange(e)}
             required
             aria-label="Name"
+            value={formData.name}
           />
 
           <input
@@ -130,6 +134,7 @@ function DesktopForm({ formName, setLoad, loc }) {
             onChange={(e) => handleChange(e)}
             required
             aria-label="Email"
+            value={formData.email}
           />
 
           <div className="flex w-full tel-container" id="phoneField">
@@ -176,6 +181,7 @@ function DesktopForm({ formName, setLoad, loc }) {
               autoComplete={"tel"}
               onChange={(e) => handleChange(e)}
               required
+              value={formData.phone}
             />
           </div>
         </div>

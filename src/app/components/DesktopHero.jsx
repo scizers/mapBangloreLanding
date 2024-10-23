@@ -120,7 +120,7 @@ const DesktopHero = () => {
               </p>
             </div>
           </div>
-          <DesktopForm />
+          <DesktopForm formName={"topForm"}/>
           <div className={"whatsAppIcon pt-2"}>
             <a id={"waLink"} href="#" rel={"nofollow"}>
               <Image

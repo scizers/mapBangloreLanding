@@ -77,7 +77,7 @@ function DesktopFormSection() {
       </div>
 
       <div className=" w-[60%] xl:w-[50%] py-5 ">
-        <DesktopForm />
+        <DesktopForm formName={"bottomForm"}/>
       </div>
       <div className={"whatsAppIcon"}>
         <a id={"waLink"} href="#" rel={"nofollow"}>
