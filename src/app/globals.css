@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: var(--font-jost);
+  --font-body: var(--font-montserrat);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-jost);
+}
+
+/* h1 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 37.57px;
+} */
+
+body {
+  font-family: var(--font-montserrat);
+}
+#heroAreaDesktop {
+  height: 100vh;
+  min-height: 800px;
+}
+#hero {
+  height: 100vh;
+  height: 100svh;
+  min-height: 600px;
+}
+#formComp {
+  @apply w-full;
+
+  .inputStyle {
+    @apply px-6 w-full h-[3.25rem] lg:h-[54px] font-medium outline-none border border-[#828282] bg-transparent placeholder:text-[1rem] placeholder:text-[#4E4D50] mb-4;
+  }
+
+  .preferredModeOfContact {
+    input {
+      @apply mr-1;
+    }
+
+    & > div > div {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.btn {
+  @apply w-full lg:w-[306px] py-4 leading-6 text-center text-white uppercase bg-black mx-auto;
+  border-radius: 4px;
+  font-size: 22px;
+  line-height: 26.82px;
+}
+.next-arrow {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  right: 0px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-arrow {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  right: 57px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keen-slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.keen-slider__slide {
+  width: 100%;
+}
