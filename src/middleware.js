@@ -14,9 +14,11 @@ export function middleware(req) {
 
   if (!hasSeenPopup) {
     if (viewport === "mobile") {
-      return NextResponse.redirect(new URL("/mobile-popup", req.url));
+      // return NextResponse.redirect(new URL("/mobile-popup", req.url));
+      return NextResponse.redirect(new URL("/mobile", req.url));
     } else {
-      return NextResponse.redirect(new URL("/desktop-popup", req.url));
+      // return NextResponse.redirect(new URL("/desktop-popup", req.url));
+      return NextResponse.redirect(new URL("/desktop", req.url));
     }
   } else {
     req.nextUrl.pathname = `/${viewport}${pathname}`;

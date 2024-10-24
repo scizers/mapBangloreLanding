@@ -17,7 +17,7 @@ const Hero = () => {
 
       <div className="p-4 px-6 mx-auto">
         <h1 className="text-[30px] leading-[40px] font-bold uppercase">
-          Biggest Investor’s <br /> meet in BANGALORE
+          Biggest Investor’s <br /> meet in Bengaluru
         </h1>
         <h2 className="text-[16px] text-[#A01010] font-medium leading-[23.12px] uppercase mt-2 ">
           9-10 Nov. 2024 <span className="mx-2">|</span> JW Marriott, Bengaluru

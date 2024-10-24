@@ -114,15 +114,20 @@ export default function MobilePopup() {
             </div>
             <FormComp formName={"popupForm"} setLoad={setLoad} onSuccess2={showThankYouPopup}/>
             <div className={"whatsAppIcon flex justify-center"}>
-              <a id={"waLink"} href="#" rel={"nofollow"}>
-                <Image
-                  quality={100}
-                  src={WAIMG}
-                  width={170}
-                  heigth={75}
-                  alt="whatapp bot"
-                />
-              </a>
+            <a
+              id={"waLink"}
+              href="https://wa.me/18106769485?text=Hi,%20I%20want%20to%20know%20more%20about%20Bengaluru%20Event"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              <Image
+                quality={100}
+                src={WAIMG}
+                width={170}
+                height={75}
+                alt="whatsapp bot"
+              />
+            </a>
             </div>
             {isThankYouVisible && (
               <div className="border-2 border-green-500 bg-white mt-1  p-2 mb-1 rounded-sm text-center">

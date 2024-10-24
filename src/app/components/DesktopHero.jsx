@@ -48,7 +48,7 @@ const DesktopHero = ({ showThankYouPopup }) => {
 
         <div className="absolute z-20 text-white transform -translate-y-1/2 top-1/2 left-[5%]">
           <h1 className="text-[55px] font-bold uppercase leading-[56px] mb-4">
-            Biggest <br /> Investor’s Meet <br /> in Bangalore
+            Biggest <br /> Investor’s Meet <br /> in Bengaluru
           </h1>
           <h2 className="text-[20px] leading-[28.9px] uppercase font-medium mb-4 text-[#FFD13A] ">
             9-10 Nov. 2024 <span className="mx-2">|</span> JW Marriott,
@@ -123,15 +123,20 @@ const DesktopHero = ({ showThankYouPopup }) => {
               </p>
             </div>
           </div>
-          <DesktopForm formName={"topForm"}  onSuccess={handleFormSuccess}/>
+          <DesktopForm formName={"topForm"} onSuccess={handleFormSuccess} />
           <div className={"whatsAppIcon pt-2"}>
-            <a id={"waLink"} href="#" rel={"nofollow"}>
+            <a
+              id={"waLink"}
+              href="https://wa.me/18106769485?text=Hi,%20I%20want%20to%20know%20more%20about%20Bengaluru%20Event"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
               <Image
                 quality={100}
                 src={WAIMG}
                 width={170}
-                heigth={75}
-                alt="whatapp bot"
+                height={75}
+                alt="whatsapp bot"
               />
             </a>
           </div>

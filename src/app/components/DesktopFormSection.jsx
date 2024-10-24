@@ -80,16 +80,21 @@ function DesktopFormSection({ showThankYouPopup }) {
       </div>
 
       <div className=" w-[60%] xl:w-[50%] py-5 ">
-        <DesktopForm formName={"bottomForm"}  onSuccess={handleFormSuccess}/>
+        <DesktopForm formName={"bottomForm"} onSuccess={handleFormSuccess} />
       </div>
       <div className={"whatsAppIcon"}>
-        <a id={"waLink"} href="#" rel={"nofollow"}>
+        <a
+          id={"waLink"}
+          href="https://wa.me/18106769485?text=Hi,%20I%20want%20to%20know%20more%20about%20Bengaluru%20Event"
+          target="_blank"
+          rel="nofollow noreferrer"
+        >
           <Image
             quality={100}
             src={WAIMG}
             width={170}
-            heigth={75}
-            alt="whatapp bot"
+            height={75}
+            alt="whatsapp bot"
           />
         </a>
       </div>
