@@ -9,7 +9,7 @@ import {
 import PhoneInput from "react-phone-input-2";
 import "../phone.css";
 
-function DesktopForm({ formName, setLoad, loc }) {
+function DesktopForm({ formName, setLoad, onSuccess2,  loc }) {
   const router = useRouter();
 
   const initState = {
@@ -94,6 +94,7 @@ function DesktopForm({ formName, setLoad, loc }) {
       setLoad(false);
       if(doc?.ok){
         setFormData(initState);
+        onSuccess2();
       }
     } catch (error) {
       console.error("Error while submitting form", error);

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -9,7 +10,7 @@ import {
 import PhoneInput from "react-phone-input-2";
 import "../phone.css";
 
-function Form({ formName, setLoad, loc }) {
+function Form({ formName, setLoad, onSuccess2 , loc }) {
   const router = useRouter();
 
   const initState = {
@@ -88,8 +89,12 @@ function Form({ formName, setLoad, loc }) {
     setLoad(true);
 
     try {
-      // let doc = await addForm(obj);
-      console.log("obj", obj);
+      let doc = await addForm(obj);
+      // console.log("obj", obj);
+      if(doc?.ok){
+        setFormData(initState);
+         onSuccess2();
+      }
       setLoad(false);
     } catch (error) {
       console.error("Error while submitting form", error);
@@ -117,6 +122,7 @@ function Form({ formName, setLoad, loc }) {
             onChange={(e) => handleChange(e)}
             required
             aria-label="Name"
+            value={formData.name}
           />
 
           <input
@@ -129,6 +135,7 @@ function Form({ formName, setLoad, loc }) {
             onChange={(e) => handleChange(e)}
             required
             aria-label="Email"
+            value={formData.email}
           />
 
           <div className="flex w-full tel-container" id="phoneField">
@@ -176,6 +183,7 @@ function Form({ formName, setLoad, loc }) {
               autoComplete={"tel"}
               onChange={(e) => handleChange(e)}
               required
+              value={formData.phone}
             />
           </div>
         </div>

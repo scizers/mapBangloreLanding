@@ -5,14 +5,22 @@ import desktopHero from "../../../public/desktopHero.png";
 import WAIMG from "../../../public/whatsapp.png";
 import DesktopFormComp from "../components/DesktopFormComp";
 import { useState } from "react";
+import ThankYouPopup from "../components/Thankyou";
 
 export default function DesktopPopup() {
+  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
   const router = useRouter();
   const [load, setLoad] = useState(false);
 
   const handleClose = () => {
     document.cookie = "hasSeenPopup=true; path=/";
     router.push("/desktop");
+  };
+  const showThankYouPopup = () => {
+    setIsThankYouVisible(true);
+  };
+  const closeThankYouPopup = () => {
+    setIsThankYouVisible(false);
   };
 
   return (
@@ -122,7 +130,7 @@ export default function DesktopPopup() {
           </div>
 
           <div className=" w-[70%] pt-5 ">
-            <DesktopFormComp formName={"popupForm"} setLoad={setLoad} />
+            <DesktopFormComp formName={"popupForm"} setLoad={setLoad}  onSuccess2={showThankYouPopup}/>
           </div>
           <div className={"whatsAppIcon pb-4"}>
             <a id={"waLink"} href="#" rel={"nofollow"}>
@@ -135,6 +143,11 @@ export default function DesktopPopup() {
               />
             </a>
           </div>
+          {isThankYouVisible && (
+              <div className="border-2 border-green-500 bg-white p-3 mb-3 rounded-sm text-center">
+                <h2 className="text-xl  text-green-400">Thank you! Our team will reach out to you soon.</h2>
+              </div>
+            )}
           <div className=" text-left  bg-[#E8D8CB] w-full py-6 rounded-b-[8px]">
             <label
               className={`block cursor-pointer btn ${load && "opacity-50 "}`}

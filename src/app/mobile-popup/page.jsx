@@ -8,6 +8,13 @@ import { useState } from "react";
 export default function MobilePopup() {
   const router = useRouter();
   const [load, setLoad] = useState(false);
+  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
+  const showThankYouPopup = () => {
+    setIsThankYouVisible(true);
+  };
+  const closeThankYouPopup = () => {
+    setIsThankYouVisible(false);
+  };
 
   const handleClose = () => {
     document.cookie = "hasSeenPopup=true; path=/";
@@ -105,7 +112,7 @@ export default function MobilePopup() {
                 You will save 5-10% more if you’re booking on event day.
               </p>
             </div>
-            <FormComp formName={"popupForm"} setLoad={setLoad} />
+            <FormComp formName={"popupForm"} setLoad={setLoad} onSuccess2={showThankYouPopup}/>
             <div className={"whatsAppIcon flex justify-center"}>
               <a id={"waLink"} href="#" rel={"nofollow"}>
                 <Image
@@ -117,6 +124,11 @@ export default function MobilePopup() {
                 />
               </a>
             </div>
+            {isThankYouVisible && (
+              <div className="border-2 border-green-500 bg-white mt-1  p-2 mb-1 rounded-sm text-center">
+                <h2 className="text-xl  text-green-400">Thank you! Our team will reach out to you soon.</h2>
+              </div>
+            )}
           </div>
 
           <div className=" text-left bg-[#E8D8CB] w-full py-8">
