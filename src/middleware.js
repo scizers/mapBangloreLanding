@@ -10,7 +10,9 @@ export function middleware(req) {
 
   const viewport = device.type === "mobile" ? "mobile" : "desktop";
 
-  const hasSeenPopup = req.cookies.get("hasSeenPopup") === "true";
+  let hasSeenPopup = req.cookies.get("hasSeenPopup") === "true";
+
+  hasSeenPopup = true
 
   if (!hasSeenPopup) {
     if (viewport === "mobile") {
