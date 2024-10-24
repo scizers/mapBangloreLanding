@@ -20,7 +20,7 @@ export default function Home() {
         return decodeURIComponent(value);
       }
     }
-    return null; 
+    return null;
   }
   useEffect(() => {
     const hasSeenPopup = getCookieValue("hasSeenPopup");
