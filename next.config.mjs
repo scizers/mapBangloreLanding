@@ -3,9 +3,8 @@ const nextConfig = {
   basePath: "/map/event_bangalore",
   trailingSlash: false,
   experimental: {
-    cssChunking: "loose", // default
+    cssChunking: "loose",
   },
-
 };
 
 export default nextConfig;
