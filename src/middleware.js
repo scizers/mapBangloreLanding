@@ -25,3 +25,4 @@ export function middleware(req) {
     return NextResponse.rewrite(req.nextUrl);
   }
 }
+
