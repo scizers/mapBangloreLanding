@@ -6,10 +6,8 @@ import aldar from "../../../public/aldar.png";
 import WAIMG from "../../../public/whatsapp.png";
 import DesktopForm from "./DesktopForm";
 
-const DesktopHero = ({ showThankYouPopup }) => {
-  const handleFormSuccess = () => {
-    showThankYouPopup();
-  };
+const DesktopHero = () => {
+ 
   return (
     <div className="w-full mx-auto overflow-hidden bg-white">
       <div className="relative h-screen max-h-[1020px]">
@@ -123,7 +121,7 @@ const DesktopHero = ({ showThankYouPopup }) => {
               </p>
             </div>
           </div>
-          <DesktopForm formName={"topForm"} onSuccess={handleFormSuccess} />
+          <DesktopForm formName={"topForm"}/>
           <div className={"whatsAppIcon pt-2"}>
             <a
               id={"waLink"}

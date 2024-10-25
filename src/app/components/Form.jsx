@@ -4,11 +4,8 @@ import FormComp from "./FormComp";
 import WAIMG from "../../../public/whatsapp.png";
 import Image from "next/image";
 
-function Form({ showThankYouPopup }) {
+function Form() {
   const [load, setLoad] = useState(false);
-  const handleFormSuccess = () => {
-    showThankYouPopup();
-  };
   return (
     <section className="flex flex-col items-center w-full lg:w-[60%] xl:w-[50%] pt-10 pb-8 lg:pt-20 lg:pb-12 mx-auto">
       <div className="flex flex-col items-center justify-center w-full gap-1 mb-3 text-center">
@@ -81,7 +78,6 @@ function Form({ showThankYouPopup }) {
         <FormComp
           formName={"bottomForm"}
           setLoad={setLoad}
-          onSuccess2={handleFormSuccess}
         />
 
         <label
