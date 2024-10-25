@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-
+import heroImg from "../../../public/hero.jpg";
 const Hero = () => {
   return (
     <div className="w-full mx-auto overflow-hidden bg-white">
       <div className="relative  w-full h-[400px]">
         <Image
-          src="/hero.jpg"
+           src={heroImg}
           alt="Event Location"
           priority={true}
           sizes="(max-width: 768px) 100vw"

@@ -10,7 +10,7 @@ import {
 import PhoneInput from "react-phone-input-2";
 import "../phone.css";
 
-function Form({ formName, setLoad, onSuccess2 , loc }) {
+function Form({ formName, setLoad , loc }) {
   const router = useRouter();
 
   const initState = {
@@ -90,10 +90,9 @@ function Form({ formName, setLoad, onSuccess2 , loc }) {
 
     try {
       let doc = await addForm(obj);
-      // console.log("obj", obj);
       if(doc?.ok){
         setFormData(initState);
-         onSuccess2();
+        router.push("/thankyou");
       }
       setLoad(false);
     } catch (error) {

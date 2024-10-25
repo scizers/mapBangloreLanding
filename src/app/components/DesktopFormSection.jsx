@@ -4,10 +4,8 @@ import WAIMG from "../../../public/whatsapp.png";
 import Image from "next/image";
 import DesktopForm from "./DesktopForm";
 
-function DesktopFormSection({ showThankYouPopup }) {
-  const handleFormSuccess = () => {
-    showThankYouPopup();
-  };
+function DesktopFormSection() {
+
   const [load, setLoad] = useState(false);
   return (
     <section className="flex flex-col items-center w-full pt-20 pb-12 mx-auto">
@@ -80,7 +78,7 @@ function DesktopFormSection({ showThankYouPopup }) {
       </div>
 
       <div className=" w-[60%] xl:w-[50%] py-5 ">
-        <DesktopForm formName={"bottomForm"} onSuccess={handleFormSuccess} />
+        <DesktopForm formName={"bottomForm"} />
       </div>
       <div className={"whatsAppIcon"}>
         <a
