@@ -1,4 +1,6 @@
 import { Montserrat, Jost } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -21,7 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jost.variable} ${montserrat.variable} `}>
+    <GoogleTagManager gtmId="GTM-KKVWVDRW" />
+
+    <body className={`${jost.variable} ${montserrat.variable} `}>
         {children}
       </body>
     </html>
