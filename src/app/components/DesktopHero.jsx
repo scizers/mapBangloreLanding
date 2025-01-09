@@ -46,7 +46,7 @@ const DesktopHero = () => {
         <div className="absolute z-20 text-white transform -translate-y-1/2 top-1/2 left-[5%]">
           <h1 className="text-[55px] font-bold uppercase leading-[56px] mb-4">
             {/* Biggest <br /> Investor’s Meet <br /> in Bengaluru */}
-            Dubai's biggest <br /> roadshow in Bangalore
+            Dubai&apos;s biggest <br /> roadshow in Bangalore
           </h1>
           <h2 className="text-[20px] leading-[28.9px] uppercase font-medium mb-4 text-[#FFD13A] ">
             15-16 Feb. 2025 <span className="mx-2">|</span> JW Marriott,

@@ -17,7 +17,7 @@ const Hero = () => {
 
       <div className="p-4 px-6 mx-auto">
         <h1 className="text-[30px] leading-[40px] font-bold uppercase">
-          Dubai's biggest <br /> roadshow in bangalore
+          Dubai&apos;s biggest <br /> roadshow in bangalore
         </h1>
         <h2 className="text-[16px] text-[#A01010] font-medium leading-[23.12px] uppercase mt-2 ">
           15-16 Feb. 2025 <span className="mx-2">|</span> JW Marriott, Bengaluru
