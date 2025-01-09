@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="w-full mx-auto overflow-hidden bg-white">
       <div className="relative  w-full h-[400px]">
         <Image
-           src={heroImg}
+          src={heroImg}
           alt="Event Location"
           priority={true}
           sizes="(max-width: 768px) 100vw"
@@ -17,10 +17,10 @@ const Hero = () => {
 
       <div className="p-4 px-6 mx-auto">
         <h1 className="text-[30px] leading-[40px] font-bold uppercase">
-          Biggest Investor’s <br /> meet in Bengaluru
+          Dubai's biggest <br /> roadshow in bangalore
         </h1>
         <h2 className="text-[16px] text-[#A01010] font-medium leading-[23.12px] uppercase mt-2 ">
-          9-10 Nov. 2024 <span className="mx-2">|</span> JW Marriott, Bengaluru
+          15-16 Feb. 2025 <span className="mx-2">|</span> JW Marriott, Bengaluru
         </h2>
       </div>
 
